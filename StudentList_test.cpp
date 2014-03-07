@@ -13,14 +13,20 @@ int main() {
 	printStuList(l, size);
 	
 	//Test read file
+	size = 0;
 	Student l2[100];
 	string inputFile = "Student.txt";
 	readFile(inputFile, l2, size);
+	
+	
+	////Test writeFile	
+//	string outputFile = "StudentListTest.txt";
+//	writeFile(outputFile, l2, size);
+	
+	Student Son(3, "Cao Thanh Son", "08/04/94", "Modor", 2012, "B3", "ICT");
+	
+	addStudent(Son, l2, size);
+	
 	printStuList(l2, size);
-	
-	//Test writeFile	
-	string outputFile = "StudentListTest.txt";
-	writeFile(outputFile, l2, size);
-	
 	return 0;
 }

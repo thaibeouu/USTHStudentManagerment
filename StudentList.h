@@ -89,4 +89,10 @@ void subString(string oString, Student l[], int &size) {
 		}
 	}
 
+	void addStudent(Student newbie, Student l[], int &size) {		
+		l[size] = newbie;
+		int newId = l[size - 1].Get_id() + 1;
+		l[size].Set_id(newId);
+		size++;				
+	}
 #endif

@@ -20,6 +20,7 @@ class Person {
 		void Set_name(string);
 		void Set_dOB(string);
 		void Set_address(string);
+		void Set_id(int);
 		
 		int Get_id();
 		string Get_name();

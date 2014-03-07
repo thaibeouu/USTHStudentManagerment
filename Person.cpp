@@ -49,6 +49,10 @@ void Person::Print() {
 	cout << address << endl;
 }
 
+void Person::Set_id(int id) {
+	this->id= id;	
+}
+
 void Person::Set_name(string name) {
 	this->name = name;
 }
