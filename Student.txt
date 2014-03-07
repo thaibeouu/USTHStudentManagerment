@@ -1,0 +1,6 @@
+1:Nguyen Van A:1/1/90:Hanoi:2010:ABC1:ICT
+2:Nguyen Van D:1/1/91:Namdinh:2009:ABC2:BIO
+3:Tran Van A:1/1/92:hanam:2010:ABC3:ENV
+4:Nguyen Phu C:1/1/90:Phutho:2011:ABC4:ICT
+5:Nguyen Van C:1/1/94:Hanoi:2009:ABC5:ICT
+6:Nguyen Van B:1/1/95:Namdinh:2010:ABC6:RE
