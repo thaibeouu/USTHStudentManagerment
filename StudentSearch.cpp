@@ -72,10 +72,23 @@ void mainSearch() {
 }
 
 //Sub functions
-//Ask user for searching material (string)
+//Ask user for searching material (string/int)
 //Ask for re-enter if the input is invalid
 //Display all students who has the same info
 void searchByName() {
+	cout << "Enter a name to search: ";
+	cin.ignore();
+	string search_name;
+	getline(cin, search_name);
+	cout << endl;
+	for (int i = 0; i < stu_list_size; ++i) {
+		string temp_string = usth_student_list[i].Get_name();
+		size_t found = temp_string.find(search_name);
+		if (found != std::string::npos) {
+			usth_student_list[i].Print();
+			cout << endl;
+		}
+	}
 }
 
 void searchByDOB() {

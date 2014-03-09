@@ -35,10 +35,10 @@ string Person::Get_address() {
 }
 
 void Person::Print() {
-	cout << id << endl;
-	cout << name << endl;
-	cout << dOB << endl;
-	cout << address << endl;
+	cout << id << ":";
+	cout << name << ":";
+	cout << dOB << ":";
+	cout << address;
 }
 
 void Person::Set_id(int id) {

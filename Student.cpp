@@ -19,9 +19,9 @@ Student::Student (int id, string name, string dOB, string address,
 
 void Student::Print() {
 	Person::Print();
-	cout << enter_year << endl;
-	cout << class_name << endl;
-	cout << major << endl;
+	cout << ":"<< enter_year << ":";
+	cout << class_name << ":";
+	cout << major;
 }
 
 void Student::Set_enter_year(int enter_year) {
