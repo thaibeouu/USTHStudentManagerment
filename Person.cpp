@@ -17,14 +17,6 @@ Person::Person(int id, string name, string dOB, string address) {
 	this->address = address;
 }
 
-/*
-Person::Person(Person::Person father) {
-	this->id = father.id;
-	this->name = father.name;
-	this->dOB = father.dOB;
-	this->address = father.address;
-}
-*/
 
 int Person::Get_id() {
 	return this->id;

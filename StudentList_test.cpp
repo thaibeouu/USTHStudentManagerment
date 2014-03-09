@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {	
-	mainScreen();//
-	return 0;
+	mainScreen();
+	return 0;//
 }
