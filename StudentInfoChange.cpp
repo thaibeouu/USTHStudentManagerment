@@ -43,11 +43,10 @@ void mainChangeStudentInfo() {
 	  					break;
 	  					//mainScreen();
 	  	case 2: cout << "Enter student ID: ";
-	  				while (!(cin >> id)||id<0)
-						{
+	  				while (!(cin >> id)||id<0) {
 							cout << "Invalid Id!" << endl;
 							cin.clear();
-						
+							cin.ignore(256,'\n');
 						}
 	  					if (isValidID(id)) changeStudentInfo(id);	  
 							else cout << "There is no student with the id: " << id << endl;					
@@ -83,7 +82,10 @@ void mainChangeStudentInfo() {
 //changeMajor()
 void changeStudentInfo(int id) {
 	for(;;) {
-		cout << endl << endl;
+		cout << "Student Info: " << endl;
+		int i = posOfID(id);
+		usth_student_list[i].Print();
+		cout << endl;		
 		cout << "Choose one type of change: " << endl;
 		cout << "1. Change name." << endl;
 		cout << "2. Change dOB." << endl;
@@ -137,6 +139,16 @@ void changeStudentInfo(int id) {
 //update student info in usth_student_list[]
 //call writeFile() to update the new info in output_text_file
 void changeName(int id) {
+	cout << "Student Name: " << endl;
+	int i = posOfID(id);
+	cout << usth_student_list[i].Get_name() << endl;	
+	string new_name;
+	cin.ignore();
+	cout << "Enter new name: ";
+	getline(cin, new_name);//cin >> new_name if new_name is integer!
+	usth_student_list[i].Set_name(new_name);
+	writeFile(output_text_file, usth_student_list, stu_list_size);
+ 	cout << "Name update success!" << endl;
 }
 
 void changeDOB(int id) {

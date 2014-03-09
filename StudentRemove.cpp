@@ -56,5 +56,25 @@ void mainRemoveStudent() {
 //remove that student, reduce size by 1 
 //call writeFile() to update info in output_text_file
 void removeStudent(Student l[], int &size) {
-	
+	int id;
+	cout << "Enter student ID: ";
+	while (!(cin >> id)||id<0) {
+		cout << "Invalid Id!" << endl;
+		cin.clear();
+		cin.ignore(256,'\n');
+	}	
+	if (isValidID(id)) {
+		int i = posOfID(id);
+		if (i > 0) {		
+			for (; i < size - 1; ++i){			
+	 			//int newId = l[i].Get_id();
+	 			l[i] = l[i+1];
+	 			//l[i].Set_id(newId);
+	 		}
+	 	}
+ 		size--;
+ 		writeFile(output_text_file, l, size);
+ 		cout << "Remove success!" << endl;
+	}  
+	else cout << "There is no student with the id: " << id << endl;		
 }

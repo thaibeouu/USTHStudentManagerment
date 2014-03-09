@@ -1,0 +1,12 @@
+3:Spirit Breaker:08/04/1994:Scourge:2012:Strength:MBA
+4:Windrunner:01/05/1965:Sentinel:2012:Destiny:Psy
+5:Drow Ranger:08/04/1934:Dire:2013:Destiny:Ass
+6:Obsidian Destroyer:23/04/1994:Radiant:2012:Destiny:ICT
+7:Doom Bringer:08/04/1876:Heaven:2012:Strength:Ast
+8:Tidehunter:08/04/1680:Inferno:2013:Strength:WF
+9:Earthshaker:08/07/1994:Undead:2012:Strength:MBA
+10:Phantom Lancer:04/04/1494:Dungeon:2012:Destiny:ICT
+11:Witch Doctor:08/04/1878:Sanctuary:2013:Destiny:ICT
+12:Drug Dealer:09/09/1999:Nirvana:2012:Destiny:Psy
+13:Legion Commander:08/12/1994:Mordor:2013:Strength:Phy
+14:Lifestealer:08/06/1674:Dark Forest:2012:Strength:Bio

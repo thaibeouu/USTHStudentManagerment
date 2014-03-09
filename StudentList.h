@@ -14,6 +14,11 @@ extern string output_text_file;
 extern string input_text_file;
 extern Student usth_student_list[1000];
 extern int stu_list_size;
+
+//StudentList.cpp
+bool isValidID(int);
+int posOfID(int);
+////////////////////////////
 //StudentMainScreen.cpp
 void mainScreen();
 ////////////////////////////
@@ -43,7 +48,6 @@ void changeAddress(int);
 void changeEnterYear(int);
 void changeClassName(int);
 void changeMajor(int);
-bool isValidID(int);
 ////////////////////////////
 
 //StudentAdd.cpp
