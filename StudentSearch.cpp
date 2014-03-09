@@ -22,7 +22,52 @@
 //Otherwise: show error, ask for other input.
 void mainSearch() {
 	for(;;) {
-		return;
+		cout << endl << endl;
+		cout << "Search a student: " << endl;
+		cout << "1. Search by name." << endl;
+		cout << "2. Search by dOB." << endl;
+	  cout << "3. Search by address." << endl;
+	  cout << "4. Search by entry year." << endl;
+	  cout << "5. Search by class name." << endl;
+	  cout << "6. Search by major." << endl;
+	  cout << "0. Back." << endl;
+	  
+	  cout << "Enter a number: ";
+	  
+	  // Verify a command if it is integer and belong to {0..6}
+	  int command;  
+		while (true) {
+			cin >> command;
+			if (cin && (command < 7) && (command > -1)) break;
+			cout << "Invalid command!" << endl;
+			cin.clear();
+			cin.ignore(256,'\n');
+		} 
+		//////////////////////////////////////////////////////////
+		
+	  switch (command) {
+	  	case 1: searchByName();
+	  					break;
+	  					//mainScreen();
+	  	case 2: searchByDOB();
+	  					//mainScreen();
+	  					break;
+	  	case 3: searchByAddress();
+	  					//mainScreen();
+	  					break;
+	  	case 4: searchByEnterYear();
+	  					//mainScreen(); 					
+	  					break;
+	  	case 5: searchByClassName();
+	  					break;
+	  	case 6: searchByMajor();
+	  					break;
+	  	case 0: return;
+	  	default: 
+	  		cout << "Invalid command!" << endl;
+	  		break;
+	  		
+	  }		
 	}
 }
 

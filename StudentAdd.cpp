@@ -49,7 +49,7 @@ void mainAddStudent() {
 	  	case 0: return;
 	  	default: 
 	  		cout << "Invalid command!" << endl;
-	  		mainScreen();
+	  		break;
 	  		
 	  }
 	}

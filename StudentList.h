@@ -36,13 +36,14 @@ void searchByMajor();
 
 //StudentInfoChange.cpp
 void mainChangeStudentInfo();
-void changeStudentInfo();
-void changeName();
-void changeDOB();
-void changeAddress();
-void changeEnterYear();
-void changeClassName();
-void changeMajor();
+void changeStudentInfo(int);
+void changeName(int);
+void changeDOB(int);
+void changeAddress(int);
+void changeEnterYear(int);
+void changeClassName(int);
+void changeMajor(int);
+bool isValidID(int);
 ////////////////////////////
 
 //StudentAdd.cpp
@@ -54,6 +55,6 @@ void addStudent(Student, Student[], int&);
 
 //StudentRemove.cpp
 void mainRemoveStudent();
-void removeStudent(int, Student[], int&);
+void removeStudent(Student[], int&);
 ////////////////////////////	
 #endif

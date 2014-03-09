@@ -14,7 +14,38 @@
 //Otherwise: print "Invalid command", ask for other input.
 void mainRemoveStudent() {
 	for(;;) {
-		return;
+		cout << endl << endl;
+		cout << "Remove a student: " << endl;
+		cout << "1. Search." << endl;
+		cout << "2. Remove student by ID." << endl;		
+	  cout << "0. Back." << endl;
+	  
+	  cout << "Enter a number: ";
+	  
+	  // Verify a command if it is integer and belong to {0..2}
+	  int command;  
+		while (true) {
+			cin >> command;
+			if (cin && (command < 3) && (command > -1)) break;
+			cout << "Invalid command!" << endl;
+			cin.clear();
+			cin.ignore(256,'\n');
+		} 
+		//////////////////////////////////////////////////////////
+		
+	  switch (command) {
+	  	case 1: mainSearch();
+	  					break;
+	  					//mainScreen();
+	  	case 2: removeStudent(usth_student_list, stu_list_size);
+	  					//mainScreen();
+	  					break;	  	
+	  	case 0: return;
+	  	default: 
+	  		cout << "Invalid command!" << endl;
+	  		break;
+	  		
+	  }		
 	}
 }
 
