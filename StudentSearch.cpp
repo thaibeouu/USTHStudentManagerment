@@ -21,7 +21,9 @@
 //'0': return;
 //Otherwise: show error, ask for other input.
 void mainSearch() {
-	
+	for(;;) {
+		return;
+	}
 }
 
 //Sub functions

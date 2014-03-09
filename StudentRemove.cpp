@@ -13,7 +13,9 @@
 //'0': return;
 //Otherwise: print "Invalid command", ask for other input.
 void mainRemoveStudent() {
-	
+	for(;;) {
+		return;
+	}
 }
 
 //Ask user for the student id

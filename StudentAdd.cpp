@@ -15,39 +15,44 @@
 //'0': return;
 //Otherwise: print "Invalid command", ask for other input.
 void mainAddStudent() {
+	for (;;) {	
 		cout << endl << endl;
-	cout << "Add a student: " << endl;
-	cout << "1. Search." << endl;
-	cout << "2. Enter student info." << endl;
-  cout << "3. Direct add" << endl;  
-  cout << "0. Back." << endl;
-  
-  cout << "Enter a number: ";
-  
-  // Verify a command if it is integer and belong to {0..3}
-  int command;  
-	while (true) {
-		cin >> command;
-		if (cin && (command < 4) && (command > -1)) break;
-		cout << "Invalid command!" << endl;
-		cin.clear();
-		cin.ignore(256,'\n');
-	} 
-	//////////////////////////////////////////////////////////
-	
-  switch (command) {
-  	case 1: mainSearch();
-  					mainAddStudent();
-  	case 2: createStudent();
-  					mainAddStudent();
-  	case 3: //directAddStudent();
-  					mainAddStudent();  					
-  	case 0: return;
-  	default: 
-  		cout << "Invalid command!" << endl;
-  		mainScreen();
-  		
-  }
+		cout << "Add a student: " << endl;
+		cout << "1. Search." << endl;
+		cout << "2. Enter student info." << endl;
+	  cout << "3. Direct add" << endl;  
+	  cout << "0. Back." << endl;
+	  
+	  cout << "Enter a number: ";
+	  
+	  // Verify a command if it is integer and belong to {0..3}
+	  int command;  
+		while (true) {
+			cin >> command;
+			if (cin && (command < 4) && (command > -1)) break;
+			cout << "Invalid command!" << endl;
+			cin.clear();
+			cin.ignore(256,'\n');
+		} 
+		//////////////////////////////////////////////////////////
+		
+	  switch (command) {
+	  	case 1: mainSearch();
+	  					break;
+	  					//mainAddStudent();
+	  	case 2: createStudent();
+	  					break;
+	  					//mainAddStudent();
+	  	case 3: //directAddStudent();
+	  					//mainAddStudent();  					
+	  					break;
+	  	case 0: return;
+	  	default: 
+	  		cout << "Invalid command!" << endl;
+	  		mainScreen();
+	  		
+	  }
+	}
 }
 
 //Let the user input all required info of the new student

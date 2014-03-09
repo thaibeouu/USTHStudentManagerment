@@ -39,7 +39,9 @@ void mainChangeStudentInfo() {
 //changeClassName()
 //changeMajor()
 void changeStudentInfo() {
-	
+	for(;;) {
+		return;
+	}
 }
 
 //With each function, display the current student info, 
