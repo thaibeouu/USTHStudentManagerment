@@ -92,18 +92,92 @@ void searchByName() {
 }
 
 void searchByDOB() {
+	cout << "Enter DoB to search: ";
+	cin.ignore();
+	string search_DoB;
+	getline(cin, search_DoB);
+	cout << endl;
+	for (int i = 0; i < stu_list_size; ++i) {
+		string temp_DoB = usth_student_list[i].Get_dOB();
+		size_t found = temp_DoB.find(search_DoB);
+		if (found != std::string::npos) {
+			usth_student_list[i].Print();
+			cout << endl;
+		}
+	}
 }
 
 void searchByAddress() {
+	cout << "Enter address to search: ";
+	cin.ignore();
+	string search_address;
+	getline(cin, search_address);
+	cout << endl;
+	for (int i = 0; i < stu_list_size; ++i) {
+		string temp_address = usth_student_list[i].Get_address();
+		size_t found = temp_address.find(search_address);
+		if (found != std::string::npos) {
+			usth_student_list[i].Print();
+			cout << endl;
+		}
+	}
 }
 
 void searchByEnterYear() {
+	cout << "Enter year to search: ";
+	cin.ignore();
+	int year;
+	cin >> year;
+	cout << endl;
+	string search_year;
+	ostringstream convert1;
+	convert1 << year;
+	search_year = convert1.str();
+	for (int i = 0; i < stu_list_size; ++i){
+		int temp  = usth_student_list[i].Get_enter_year();
+		string temp_year;
+		ostringstream convert2;
+		convert2 << temp;
+		temp_year = convert2.str();
+	
+		size_t found = temp_year.find(search_year);
+		if (found != std::string::npos){
+			usth_student_list[i].Print();
+			cout << endl;
+		}
+	}
 }
 
 void searchByClassName() {
+	cout << "Enter class to search: ";
+	cin.ignore();
+	string search_class;
+	getline(cin, search_class);
+	cout << endl;
+	for (int i = 0; i < stu_list_size; ++i) {
+		string temp_class = usth_student_list[i].Get_class_name();
+		size_t found = temp_class.find(search_class);
+		if (found != std::string::npos) {
+			usth_student_list[i].Print();
+			cout << endl;
+		}
+	}
 }
 
 void searchByMajor() {
+	cout << "Enter major to search: ";
+	cin.ignore();
+	string search_major;
+	getline(cin, search_major);
+	cout << endl;
+	for (int i = 0; i < stu_list_size; ++i) {
+		string temp_major = usth_student_list[i].Get_major();
+		size_t found = temp_major.find(search_major);
+		if (found != std::string::npos) {
+			usth_student_list[i].Print();
+			cout << endl;
+		}
+	}
 }
 
 
