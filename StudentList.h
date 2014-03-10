@@ -18,6 +18,7 @@ extern int stu_list_size;
 //StudentList.cpp
 bool isValidID(int);
 int posOfID(int);
+int newID(Student[], int);
 ////////////////////////////
 //StudentMainScreen.cpp
 void mainScreen();

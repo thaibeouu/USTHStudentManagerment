@@ -25,4 +25,12 @@ int posOfID(int id) {
 	return -1;
 }
 
+int newID(Student l[], int size) {
+	int new_id = l[size-1].Get_id() + 1;
+	for (int i = 0; i < size; ++i) {
+		if (l[i].Get_id() == new_id) new_id++;
+	}
+	return new_id;
+}
+
 

@@ -62,7 +62,60 @@ void mainAddStudent() {
 //2. Re enter info //mainAddStudent() 
 //0. return;
 void createStudent() {
-	
+	string new_name, new_dob, new_address, new_class_name, new_major;
+	int new_enter_year;
+	cout << "Name: " << endl;
+	cin.ignore();
+	getline(cin, new_name);
+	cout << "DOB: " << endl;
+	//cin.ignore();
+	getline(cin, new_dob);
+	cout << "Address: " << endl;
+	//cin.ignore();
+	getline(cin, new_address);
+	cout << "Enter year: " << endl;
+	while (!(cin >> new_enter_year)||new_enter_year<0) {
+		cout << "Invalid number!" << endl;
+		cin.clear();
+		cin.ignore(256,'\n');
+	}	
+	cout << "Class: " << endl;
+	cin.ignore();
+	getline(cin, new_class_name);
+	cout << "Major: " << endl;
+	//cin.ignore();
+	getline(cin, new_major);	
+	int new_id = newID(usth_student_list, stu_list_size);	
+	Student newbie( new_id, 
+									new_name, 
+									new_dob, 
+									new_address, 
+									new_enter_year,
+									new_class_name, 
+									new_major);
+	cout << "Choose one: " << endl;
+	cout << "1. Add student" << endl;
+	cout << "0. Back" << endl;
+	int command;
+	while (true) {
+			cin >> command;
+			if (cin && (command < 4) && (command > -1)) break;
+			cout << "Invalid command!" << endl;
+			cin.clear();
+			cin.ignore(256,'\n');
+		} 
+	switch (command) {
+	  	case 1: addStudent(newbie, usth_student_list, stu_list_size);
+							cout << "Add success! New student info: " << endl;
+							newbie.Print();
+							cout << endl;
+	  					break;	  						  
+	  	case 0: return;
+	  	default: 
+	  		cout << "Invalid command!" << endl;
+	  		break;
+	  		
+	  }
 }
 
 //UPDATE LATER
